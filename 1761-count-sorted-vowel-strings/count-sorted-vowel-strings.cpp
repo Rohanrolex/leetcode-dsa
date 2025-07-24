@@ -1,18 +1,20 @@
 class Solution {
 public:
-    vector<char> vowels = {'a', 'e', 'i', 'o', 'u'};
-
-    int dfs(int n, int start) {
-        if (n == 0) return 1;
-
-        int count = 0;
-        for (int i = start; i < vowels.size(); ++i) {
-            count += dfs(n - 1, i);  // pick vowel[i] and recurse
-        }
-        return count;
-    }
-
     int countVowelStrings(int n) {
-        return dfs(n, 0);  // start from first vowel
+        vector<vector<int>> dp(n + 1, vector<int>(6, 0));
+
+        // Base case: strings of length 1
+        for (int j = 1; j <= 5; j++) {
+            dp[1][j] = j;
+        }
+
+        // Fill the table
+        for (int i = 2; i <= n; i++) {
+            for (int j = 1; j <= 5; j++) {
+                dp[i][j] = dp[i][j - 1] + dp[i - 1][j];
+            }
+        }
+
+        return dp[n][5]; // Final answer
     }
 };
