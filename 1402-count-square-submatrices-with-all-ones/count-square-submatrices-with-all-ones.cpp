@@ -17,7 +17,7 @@ public:
                     }
                     totalCount += dp[i][j];
                 }
-                // else: do nothing, dp[i][j] stays 0
+                
             }
         }
 
