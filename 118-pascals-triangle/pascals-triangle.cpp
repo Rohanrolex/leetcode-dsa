@@ -1,22 +1,19 @@
 class Solution {
 public:
-
-
     vector<vector<int>> generate(int numRows) {
-           vector<vector<int>>dp(numRows);
+        vector<vector<int>>dp(numRows);
 
-           for(int i = 0; i<numRows ;i++)
-           {
-             dp[i].resize(i+1);
-            dp[i][0] = dp[i][i] = 1; //the first and last index always 1
-              
+        for(int i =0 ;i<numRows ;i++){
+             
+               dp[i].resize(i+1);
+               dp[i][0] = dp[i][i] = 1;
 
-            for(int j =1; j<i ;j++){
-                 dp[i][j] = dp[i-1][j-1] + dp[i-1][j];  //that is calculated the prev two ele sum
-            }
-               
-              
-           }
-         return dp;
+               for(int j =1 ;j<i;j++){
+                   
+                   dp[i][j] = dp[i-1][j-1] + dp[i-1][j];
+               }
+
+        } 
+        return dp;    
     }
 };
