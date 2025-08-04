@@ -10,7 +10,7 @@ public:
                     result += c;
                 }
                 p.push(c);
-            } else { // c == ')'
+            } else { 
                 p.pop();
                 if (!p.empty()) {
                     result += c;
