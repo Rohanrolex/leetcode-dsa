@@ -8,18 +8,17 @@ public:
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (vis[j] == -1 && fruits[i] <= baskets[j]) {
-                    vis[j] = 1; // mark basket as used
-                    break; // go to next fruit
+                    vis[j] = 1; 
+                    break; 
                 }
             }
         }
 
-        // Count how many fruits were not placed by counting how many baskets are still -1
         int usedBaskets = 0;
         for (int i = 0; i < m; i++) {
             if (vis[i] == 1) usedBaskets++;
         }
 
-        return n - usedBaskets;  // total fruits - placed fruits
+        return n - usedBaskets;  
     }
 };
