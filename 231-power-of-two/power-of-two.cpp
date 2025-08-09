@@ -9,6 +9,7 @@ public:
             return true;       
         if (n % 2 != 0) 
             return false;      
-        return isPowerOfTwo(n / 2); 
+        return isPowerOfTwo(n / 2);
+         
     }
 };
