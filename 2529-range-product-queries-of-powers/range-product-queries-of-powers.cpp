@@ -3,13 +3,10 @@ class Solution {
 public:
     vector<int> productQueries(int n, vector<vector<int>>& queries) {
    const int MOD = 1e9 + 7;
-
-
    vector<int>power;
 
 
-
-   for(int i =0 ;i<31;i++){
+   for(int i =0 ;i<30;i++){
       if(n & (1<<i)){
          power.push_back(1<<i);
       }
