@@ -30,7 +30,7 @@ public:
 
          }
 
-         ans.push_back(int(product));
+         ans.push_back(product);
       }
 
 
