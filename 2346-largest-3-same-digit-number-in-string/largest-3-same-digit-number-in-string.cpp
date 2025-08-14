@@ -8,9 +8,7 @@ public:
                 string p ="";
                  if(nums[i] == nums[i+1] && nums[i] == nums[i+2]){
 
-                         p.push_back(nums[i]);
-                          p.push_back(nums[i]);
-                           p.push_back(nums[i]);
+                        p = nums.substr(i ,3);
 
                  }
                  ans = max(ans , p);
