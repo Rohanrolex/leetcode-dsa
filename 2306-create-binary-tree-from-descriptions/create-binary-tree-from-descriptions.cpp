@@ -4,7 +4,7 @@ public:
         unordered_map<int, TreeNode*> node;
         unordered_set<int> childset;
 
-        for (auto &it : descriptions) {
+        for (auto &it : descriptions){
             int parent = it[0];
             int child = it[1];
             int isleft = it[2];
