@@ -5,7 +5,7 @@ public:
        int n  = dimensions.size();
 
      int  ans = 0;
-     int DiagonalLen =-1;
+     int DiagonalLen =0;
 
        for(int i =0 ;i<n ;i++){
            
