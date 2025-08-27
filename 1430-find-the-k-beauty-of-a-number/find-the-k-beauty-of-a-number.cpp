@@ -11,6 +11,7 @@ public:
 
 
                 if(c!=0 && num%c == 0) count++;
+                
            }
            return count;
     }
