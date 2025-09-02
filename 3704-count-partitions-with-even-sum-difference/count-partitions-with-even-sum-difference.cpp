@@ -1,20 +1,17 @@
 class Solution {
 public:
     int countPartitions(vector<int>& nums) {
-         int totalsum = accumulate(nums.begin() , nums.end(),0);
-          
+         int totalsum = accumulate(nums.begin() , nums.end() , 0);
+         int  sum = 0;
+         int count =0;
 
-        // int left=0;
-        int patition =0;
+         for(int i =0 ;i<nums.size()-1 ;i++){
+             sum += nums[i];
+             int remaining = totalsum - sum;
 
+             if(abs(sum - remaining) %2 == 0) count++;
+         }
 
-        for(int i =0 ; i<nums.size()-1 ;i++){
-              int left = nums[i];
-              int right = totalsum - left;
-
-              if(abs(left - right) % 2 ==0) patition++;
-        }
-
-        return patition;
+         return count;
     }
 };
