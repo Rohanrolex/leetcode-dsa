@@ -2,11 +2,18 @@ class Solution {
 public:
     int missingNumber(vector<int>& nums) {
         int n = nums.size();
-       int sum = n*(n+1)/2; //first nth natural number sum
+         unordered_map<int,bool>mpp;
+   
+   for(auto it: nums){
+     mpp[it] = true;
+   }
 
-       int sum1 = accumulate(nums.begin() , nums.end(),0);
 
-       int missingNumber = sum - sum1;
-       return missingNumber;
+   for(int i =0 ;i<=n;i++){
+     if(mpp.find(i) == mpp.end()){
+        return i; //not found the ele
+     }
+   }
+return -1;
     }
 };
