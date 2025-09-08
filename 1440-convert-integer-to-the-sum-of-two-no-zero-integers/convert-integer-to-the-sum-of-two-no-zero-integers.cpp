@@ -14,9 +14,9 @@ public:
              int a =i;
              int b = n-i;
              if(!anyzero(a) && !anyzero(b)){
-                return{a,b};
+                return {a,b};
              }
          }
-return{};
+return {};
     }
 };
