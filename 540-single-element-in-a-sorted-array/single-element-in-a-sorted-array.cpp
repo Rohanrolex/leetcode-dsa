@@ -1,16 +1,20 @@
 class Solution {
 public:
     int singleNonDuplicate(vector<int>& nums) {
-        unordered_map<int,int>mpp;
+      int n = nums.size();
+      int low =0;
+      int high = n-1;
 
-//for frequency
-        for(int it: nums){
-            mpp[it]++;
-        }
+      while(low<high){
+        int mid = (low+high)/2;
 
-        for(auto it: mpp){
-            if(it.second == 1) return it.first;
+        if(mid%2 == 1) mid--;
+        if(nums[mid] != nums[mid+1]){
+            high = mid;
         }
-        return -1;
+        else low = mid+2;
+      
+      }
+      return nums[low] ;
     }
 };
