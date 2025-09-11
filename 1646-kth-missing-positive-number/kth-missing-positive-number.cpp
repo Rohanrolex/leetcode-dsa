@@ -1,22 +1,24 @@
 class Solution {
 public:
     int findKthPositive(vector<int>& arr, int k) {
-         set<int>st;
+         int n = arr.size();
 
-for(auto it : arr){
-    st.insert(it);
-}
+         int low =0;
+         int high = n-1;
+    
+         while(low<=high){
+            int mid = (low+high)/2;
+            int missing = (arr[mid]-(mid+1)); //it find
+             if(missing < k){
+                low = mid+1;
 
-         int i=1;
-         int count=0;
-         while(true){
-            if(st.find(i) == st.end()){
-                count++;
-                if(count == k) return i;
-            
-            }
-            i++;
+             }else{
+                high = mid-1;
+             }
+
+
          }
-        
+         
+        return low+k;
     }
 };
