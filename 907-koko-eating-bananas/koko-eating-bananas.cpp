@@ -14,7 +14,7 @@ public:
         int high = maxi;
 
         while (low <= high) {
-            int mid = low + (high - low) / 2; // safer midpoint
+            int mid = low + (high - low) / 2; 
             long long totaltime = time(piles, mid);
 
             if (totaltime <= h) {
