@@ -13,6 +13,7 @@ for(auto it : arr){
             if(st.find(i) == st.end()){
                 count++;
                 if(count == k) return i;
+            
             }
             i++;
          }
