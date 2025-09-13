@@ -1,28 +1,27 @@
 class Solution {
 public:
     int maxFreqSum(string s) {
+         set<char>st = {'a','e','i','o','u'};
+         unordered_map<char,int>mpp;
 
-        set<char>st = {'a','e','i','o','u'};
-       unordered_map<char,int>mpp;
 
-          for(auto &it : s){
-             mpp[it]++;      //count the freq;
-              
-          } 
-         
-         int maxvowel = 0;
-         int maxconsonent = 0;
-          for(auto &c : mpp){
-             if(st.count(c.first)){
-                   maxvowel = max(maxvowel , c.second);//count the maximum vowel
-             } else{
-                
-                maxconsonent = max(maxconsonent , c.second); //count the maximum consonent 
+//count the freq
+         for(auto it : s){
+            mpp[it]++;
+         }
 
+         int maxvowel =0;
+         int maxconsonant = 0;
+
+         for(auto it : mpp){
+             
+             if(st.count(it.first)){
+                 maxvowel = max(maxvowel , it.second);
+             }else{
+                maxconsonant = max(maxconsonant , it.second);
              }
+         }
 
-          }
-
-          return  maxvowel+  maxconsonent; 
+         return maxvowel+maxconsonant;
     }
 };
