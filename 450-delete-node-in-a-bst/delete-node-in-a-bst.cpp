@@ -11,8 +11,6 @@
  */
 class Solution {
 public:
-
-
     TreeNode* deleteNode(TreeNode* root, int key) {
 
     if (!root) return NULL;
@@ -23,6 +21,7 @@ public:
     else if (key > root->val) {
         root->right = deleteNode(root->right, key);
     }
+    //this else  block run when 
     else {
         // no child
         if (!root->left && !root->right) return NULL;
