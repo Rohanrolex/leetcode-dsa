@@ -11,18 +11,18 @@
  */
 class Solution {
 public:
-int sum=0;
+
 int solve(TreeNode* root){
     if(root == NULL) return 0;
      int left = solve(root->left);
      int right = solve(root->right);
-  sum = (left+right) +1;
-  return sum;
+  return (left+right) +1;
+ 
 }
     int countNodes(TreeNode* root) {
       
         if(root == NULL) return 0;
-        solve(root);
-        return sum;
+       return  solve(root);
+       
     }
 };
