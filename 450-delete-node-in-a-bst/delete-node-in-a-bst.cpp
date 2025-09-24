@@ -21,7 +21,7 @@ public:
     else if (key > root->val) {
         root->right = deleteNode(root->right, key);
     }
-    //this else  block run when 
+    //this else  block run when root->val == key
     else {
         // no child
         if (!root->left && !root->right) return NULL;
