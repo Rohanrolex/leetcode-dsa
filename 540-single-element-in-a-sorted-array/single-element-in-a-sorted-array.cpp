@@ -7,7 +7,7 @@ public:
 
       while(low<high){
          int mid = (low+high)/2;
-         if(mid%2 == 1) mid--;
+         if(mid % 2 == 1) mid--;
 
          if(nums[mid] != nums[mid+1]) high = mid;
          else low = mid+2;
