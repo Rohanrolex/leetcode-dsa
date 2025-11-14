@@ -22,9 +22,6 @@ while(left< right){
     }
 
 }
-
-
-
         return water;
     }
 };
