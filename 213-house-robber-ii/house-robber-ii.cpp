@@ -2,8 +2,8 @@ class Solution {
 public:
    int rob2(vector<int>& nums) {
         int n = nums.size();
-       if(n==0) return 0; //if no house is present is 0
-       if(n==1) return nums[0]; // if just one house is present
+       if(n==0) return 0; 
+       if(n==1) return nums[0]; 
        int prev1 =0;
        int prev2 =0;
 
@@ -17,7 +17,7 @@ public:
     }
     int rob(vector<int>& nums) {
         int n = nums.size();
-        if(n==1) return nums[0]; // if there is just one element in the array then just  return it 
+        if(n==1) return nums[0]; 
 
         vector<int> temp1,temp2;
         for(int i =0 ;i<n ;i++){
