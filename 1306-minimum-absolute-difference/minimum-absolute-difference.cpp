@@ -25,10 +25,8 @@ void pairsum(vector<int>& arr , int minsum ,  vector<vector<int>>& ans){
           int minsum = abs(arr[0]-arr[1]);
            minsum =  countminsum(arr, minsum);
           vector<vector<int>> ans;
-            pairsum(arr, minsum , ans);
-
-          
-return ans;
+            pairsum(arr, minsum , ans);      
+            return ans;
 
     }
 };
