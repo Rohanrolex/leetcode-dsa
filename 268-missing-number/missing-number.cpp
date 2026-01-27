@@ -1,8 +1,9 @@
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
+
         int n = nums.size();
-         unordered_map<int,bool>mpp;
+        unordered_map<int,bool>mpp;
    
    for(auto it: nums){
      mpp[it] = true;
