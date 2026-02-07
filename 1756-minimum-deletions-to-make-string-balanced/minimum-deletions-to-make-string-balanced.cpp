@@ -16,7 +16,6 @@ public:
             res = min(res, a + b);      // deletions needed
             if (c == 'b') b++;          // add to left
         }
-
         return res;
     }
 };
