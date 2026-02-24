@@ -11,21 +11,21 @@
  */
 class Solution {
 public:
-int dfs(TreeNode* root , string path){
-   
-    if(root == NULL) return 0;
 
-    path += char('0'+root->val); //add the current node value 
-    if(root->left == NULL && root->right == NULL){
-        return stoi(path , 0 , 2); //it converts the string to decimal value 
-    }
-    return dfs(root->left , path)+dfs(root->right , path);
+int dfs(TreeNode * root , int currsum){
+
+if(root == NULL) return 0;
+ currsum =  currsum*2 + root->val;
+
+if(root->left == NULL && root->right ==NULL) return currsum;
+
+return dfs(root->left , currsum) + dfs(root->right , currsum);
+
+
 }
-
     int sumRootToLeaf(TreeNode* root) {
-       
-       if(root == NULL) return 0;
-      return dfs(root, "");
         
+  return dfs(root, 0);
+ 
     }
 };
