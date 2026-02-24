@@ -21,6 +21,7 @@ int dfs(TreeNode* root , string path){
     }
     return dfs(root->left , path)+dfs(root->right , path);
 }
+
     int sumRootToLeaf(TreeNode* root) {
        
        if(root == NULL) return 0;
