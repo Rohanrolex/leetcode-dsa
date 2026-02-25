@@ -7,7 +7,7 @@ public:
 
         for (int j = 0; j < n - i - 1; j++) {
           
-          	// Comparing adjacent elements
+          	
             if (__builtin_popcount(arr[j]) > __builtin_popcount(arr[j + 1])){
                       swap(arr[j], arr[j + 1]);
             }
