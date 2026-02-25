@@ -1,0 +1,22 @@
+class Solution {
+public:
+    vector<int> sortByBits(vector<int>& arr) {
+        int n = arr.size();
+        sort(arr.begin(),arr.end());
+          for (int i = 0; i < n - 1; i++) {
+
+        for (int j = 0; j < n - i - 1; j++) {
+          
+          	// Comparing adjacent elements
+            if (__builtin_popcount(arr[j]) > __builtin_popcount(arr[j + 1])){
+                      swap(arr[j], arr[j + 1]);
+            }
+              
+              	
+                
+        }
+    }
+    return arr;
+
+    }
+};
