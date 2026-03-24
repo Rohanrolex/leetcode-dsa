@@ -11,7 +11,7 @@ public:
        long long suffix = 1;
        for(int i = n-1 ;i>=0 ;i--){
         for(int j = m-1 ;j>=0 ;j--){
-            p[i][j] = suffix %MOD;
+            p[i][j] = suffix;
             suffix = (suffix * grid[i][j])%MOD;
         }
        } 
